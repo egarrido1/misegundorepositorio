@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>Ejemplo></title>
+    </head>
+    <body>
+        <p>Mi bebito fiufiu</p>
+        <h1>MI primera pagina web</h1>
+        <!-- este es un comentario, no se mostrará en el navegador -->
+        <p>este es um parrafo1 con un <br> salto de linea dentro.</p>
+    </body>
+<html>
+    
