@@ -1,0 +1,212 @@
+/* Archivo de estilos CSS para mi tienda de muebles */
+
+/* Define el tamaño de la fuente para todo el html */
+
+/*
+* {
+font-size: 62.5%;
+}
+*/
+
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+/* Aplica la fuente Playfair a diferentes titulos */
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+}
+
+/* Aplica tamaño de fuente para h1 */
+h1 {
+    font-size: 5rem,
+}
+h2, h3 {
+    font-size: 4rem,
+}
+
+/* Define estilo para encabezados h1 del header */
+.color-muebles {
+    color: #037BC0;
+}
+
+/* Alinea al centro el titulo de la  tienda */
+header h1 {
+    text-align: center;
+}
+
+/* Estilos para los enlaces del menú de navegación */
+nav a {
+    color: black; /* color gris */
+    text-decoration: none; /* elimina el subrayado */
+    padding: 10px 15px; /* Agrega espacio alrededor del texto */
+    transition: color 0.3s; /*Agrega una transición para el cambio de color */
+}
+
+/* Cambia el color del texto cuandp se pasa el cursor sobre los enlaces */
+nav a:hover {
+    color: purple; /*Cambia el color a azul */
+}
+
+/* Estilos para la sección hero */
+.contenedor {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+/* Definición de textos sección hero */
+.texto-sobre-imagen, .segundo-texto, .boton-llamada {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente el primer texto */
+}
+
+.texto-sobre-imagen {
+    top: 20%; /* Ajusta la ppsición vertical del primer  texto */
+}
+
+.segundo-texto {
+    top: 30%; /* Ajusta la osición vertical del segundo texto */
+    transform: translateX(-50%); /* Centra horizontalmemte el segundo texto */
+}
+
+/* Estilos para el boton de llamada a la acción de la sección hero */
+.boton-llamada {  
+    top:40%; /* Ajusta la posición vertical del botón. */
+    margin: 10px auto;
+    padding: 10px 20px; /* ajusta el espaciado del boton. */
+    font-size: 16px;
+    background-color: #03c02f; /* Ajusta el color del fondo del boton. */
+    color: #fff;/* Ajusta el color del texto del boton. */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ /* Define sección hero */
+ .hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilos para la imagen sección Hero. */
+.hero-image {
+    /*width: 1.6rem;*/
+    width: 100%;
+    height: auto;
+}
+
+ /* Reglas de estilos para las filas de dos columnas */
+ .row {
+    display: flex; /* Permite la distribución automática del esopacio */
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.column {
+    width: 48%; /* Ajusta el ancho */
+    box-sizing: border-box;
+    padding: 10px;  
+    border: 1px solid #ccc; /* Añade un borde para mayor claridad */
+}
+
+/* Define estilos para encabezados h2 de productos */
+.productos h2 {
+    text-align: center;
+}
+
+/*  Estilos para las categorías */
+.categoria a {
+    color: grey; /* Color inicial del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: color 0.3s; /* Transición para el cambio de color */
+}
+
+ /* Define estilo para los parrafos de las categorias */
+ .categoria p {
+    text-align: center;
+}
+
+/* Cambia el color del texto  cuando se pasa el cursor sobre las categorías */
+.categoria a:hover {
+   color: purple; /* Cambia a color rojo */
+}
+
+ /* Estilos para el boton "Agregar al carrito" */
+ .add-to-cart-button {
+    display: block;
+    margin: 10px auto; /* ajusta el margen sup. e inf. y centra horizontalmente. */
+    padding: 10px 20px; /* ajusta el relleno  */
+    font-size: 16px;
+    background-color: #03c02f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ /* Estilos para las imagenes */
+ .column img {
+    width: 100%; /* ajusta el ancho de la imagen al 100% de la columna */
+    height: auto; /* mantiene la porcion original de la imagen */
+}
+
+/* Agrega color azul a las columnas que no tengan imagen y que no sea el footer. */
+.column:not(.footer .footer-column):not(:has(img)) {
+    background-color: #4065e0;
+    color: white;
+    text-align: center;
+}
+
+ /* Reglas de estilo para el footer  */
+ footer {
+    display: flex; /* Permite la distribución automática del esopacio */
+    justify-content: space-between;
+    background-color: white; 
+    color: white; /* Color blanco para encabezados del footer */
+    padding: 20px 0;
+    text-align: center;
+}
+
+ /* Reglas de estilo para cada columna del footer */
+ .footer-column {
+    width: 30%;
+    box-sizing: border-box; /* El tamaño total del elemento se mantiene constante */
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.footer-column nav {
+    list-style: none; 
+    padding: 0; /* Elimina el relleno predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+ /* Estilos para los enlaces del menu de navegación del footer. */
+ .footer-column nav a {
+    color: #ccc;  /*color de texto blanco */
+    text-decoration: none;  /* Sin decoración del enlace */
+    padding: 10px; /* Relleno */
+    display: block;  /* Menu vertical */
+    margin-bottom: 5px; /* Espacio entre elementos del menu */
+}
+
+ul {
+    list-style: none; /* Elimina las viñetas predeterminadas de las listas */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px; /* Ajusta el espacio entre cada elemento de la lista */
+    display: block; /* Asegura que los elementos li esten en lineas separadas y se centren correctamente */
+}
+
+  /* Defien estilo para encabezados h3 del footer */
+  header h3 {
+    text-align: center;
+}
+
+
