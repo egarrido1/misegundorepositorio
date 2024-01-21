@@ -1,214 +1,230 @@
-qw<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <title>Ecommerce - Inicio</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <header>
-        <!-- Titulo de mi tienda -->
-        <h1> Mi tienda de <span class="color-muebles">Muebles</span></h>
-       <!-- <h1> Mi tienda de <span style="color: #037bc0;""> Muebles</span></h1> -->
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <title>Ecommerce - Inicio</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <!-- Titulo de mi tienda -->
+                <h1> Mi tienda de <span class="color-muebles">Muebles</span></h1>
+            </header>
 
-    <!-- Menú de navegación -->
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#Nosotros">Nosotros</a>
-        <a href="#tienda">Tienda</a>
-        <a href="#blog">Blog</a>
-        <a href="#galería">Galería</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+            <!-- Menú de navegación -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Mi Tienda</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tienda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Galería</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
 
-    <!-- Sección Hero -->
-   <div class="hero"> 
-        <div class="contenedor">
-            <img class="hero-image" src="principal.jpg" alt="mi tiemda de muebles" width="400">
-            <div class="texto-sobre-imagen"><h1>Diseños 2023</h1></div>
-            <div class="segundo-texto"><h2>Ven y conoce nuestros diseños</h2></div>
-            <buttom class="boton-llamada">Descubre mas</buttom>
+            <!-- Sección hero -->
+            <div class="hero">
+                <div class="contenedor">
+                    <img class="img-fluid hero-image" src="principal.jpg" alt="Mi tienda de muebles">
+                    <div class="texto-sobre-imagen text-center">
+                        <h1 class="display-4">Diseños 2024</h1>
+                        <h2 class="h4">Ven y conoce nuestros diseños</h2>
+                        <button class="btn mi-boton-personalizado btn-lg">Descubre más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección productos -->
+            <div>
+                <h2 class="productos">Nuevos productos</h2> 
+            </div> 
+
+            <!--Se inserta primera fila con dos columnas --> 
+            <div class="row">  <!-- Contenedor de productos -->
+                <!-- Producto 1 -->
+                <div class="column">
+                    <img src="producto1.jpg" alt="Recamara Juvenil">
+                </div>
+                <!-- Descripción del Producto 1 -->
+                <div class="column">
+                    <div class="descripcion">
+                        <h3>Recamara Juvenil</h3>
+                        <p>Recamara individual con base de madera, incluye escritorio, silla y librero con estantes. Su precio es de $20,000</p>
+                        <button class="btn mi-boton-personalizado btn-block">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Segunda fila con dos columnas para productos 2 y 3 -->
+            <div class="row">
+                <!-- Producto 2 -->
+                <div class="column">
+                    <img src="producto2.jpg" alt="Cuadro decorativo">
+                    <div class="descripcion">
+                        <h3>Cuadro decorativo</h3>
+                        <p>Cuadro decorativo Minimalista con figuras geométricas. Su precio es de $10,000</p>
+                        <button class="btn mi-boton-personalizado btn-block">Agregar al carrito</button>
+                    </div>
+                </div>
+            
+                <!-- Producto 3 -->
+                <div class="column">
+                    <img src="producto3.jpg" alt="Recamara King Zize">
+                    <div class="descripcion">
+                        <h3>Recamara King Zize</h3>
+                        <p>Recamara king Zize con base de madera. Su precio es de $25,000</p>
+                        <button class="btn mi-boton-personalizado btn-block">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tercera fila con tres columnas para productos 4,5, y 6 -->
+            <div class="row">
+                <!-- Producto 4 -->
+                <div class="col-md-4">
+                    <img src="producto4.jpg" class="img-fluid" alt="producto4">
+                    <!-- Descripción del Producto 4 -->
+                    <div class="descripcion">
+                        <h3>Sofá Minimalista</h3>
+                        <p>Sofá minimalista, forrado en tela. Su precio es de $20,000</p>
+                        <button class="btn mi-boton-personalizado btn-block btn-tres-columnas">Agregar al carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 5 -->
+                <div class="col-md-4">
+                    <img src="producto5.jpg" class="img-fluid" alt="producto5">
+                    <!-- Descripción del Producto 5 -->
+                    <div class="descripcion">
+                        <h3>Sillón Individual</h3>
+                        <p>Sillón individual, forrado en tela tipo piel, color gris. Su precio es de $15,000</p>
+                        <button class="btn mi-boton-personalizado btn-block btn-tres-columnas">Agregar al carrito</button>
+                    </div>
+                </div>
+                <!-- Producto 6 -->
+                <div class="col-md-4">
+                    <img src="producto6.jpg" class="img-fluid" alt="producto6">
+                    <!-- Descripción del Producto 6 -->
+                    <div class="descripcion">
+                        <h3>Sofá de lujo</h3>
+                        <p>Sofá de lujo, forrado en tela tipo piel, color menta. Su precio es de $20,000</p>
+                        <button class="btn mi-boton-personalizado btn-block btn-tres-columnas">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Sección categorías de productos -->
+            <div>
+                <h2 class="tit-categorias">Categorías de productos</h2> 
+            </div>
+
+            <!-- Se inserta cuarta fila con tres columnas, para las categorias 1, 2 y 3. --> 
+            <div class="row">
+                <!-- Columna 1-->
+                <div class="col-md-4 categoria"> <!-- Columna  para la categiría 1-->
+                    <a href="#"> <img src="categoria1.jpg" class="img-fluid" alt="categoría1">
+                        <div class="tit-categorias">
+                            <a href="#Oficina" class="text-decoration-none">OFICINA</a>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Columna 2 -->
+                <div class="col-md-4 categoria"> <!-- Columna para la categoría 2 -->
+                    <a href="#"> <img src="categoria2.jpg" class="img-fluid" alt="categoría2">
+                        <div class="tit-categorias">
+                            <a href="#Hogar" class="text-decoration-none">HOGAR</a>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Columna 3 -->
+                <div class="col-md-4 categoria"><!-- Columna para la categoría 3 -->
+                    <a href="#"> <img src="categoria3.jpg" class="img-fluid" alt="categoría3">
+                        <div class="tit-categorias categoria">
+                            <a href="#Cocina" class="text-decoration-none">COCINA</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sección footer -->
+            <!-- footer con fila de tres columnas -->
+            <footer class="container-xl">
+                <div class="footer-column">
+                    <h3>Categorias</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Cocina</a></li>
+                            <li><a href="#">Oficina</a></li>
+                            <li><a href="#">Jardin</a></li>
+                            <li><a href="#">Cochera</a></li>
+                            <li><a href="#">Dormitorios</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Sobre nosotros</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Nuestra historia</a></li>
+                            <li><a href="#">Mision</a></li>
+                            <li><a href="#">Visión y valores</a></li>
+                            <li><a href="#">Carrera</a></li>
+                            <li><a href="#">Póliticas de privacidad</a></li>
+                            <li><a href="#">Términos del servicio</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Soporte</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Ayuda en linea</a></li>
+                            <li><a href="#">Confianza y seguridad</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </footer>
+            <!-- Despliega "Derechos reservados"-->
+            <div class="rights">
+                <p>&copy; 2024 Mi tienda de muebles. Todos los derechos reservados.</p>
+            </div>
+            <!-- Biblioteca de JavaScript de Bootstrap (requiere jQuery) -->
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
         </div>
-   </div>
-
-    <!-- Sección productos -->
-    <div class="productos">
-        <h2>Nuevos Productos</h2>
-    </div>
-   
-     <!-- se inserta primera fila con dos columnas --> 
-     <div class="row">
-        <!-- Columna 1-->
-        <div class="column">
-            <img src="producto1.jpg">
-            <!--<p style="text-align: center;"><b>Imagen del producto 1</b></p>-->
-        </div>
-
-        <!-- Columna 2  ;con boton "agregar al carrito" -->
-        <div class="column">
-            <h3>Recamara Juvenil</h3>
-            <p>Recamara individual con base de madera,<br> incluye esctitorio,<br> silla y librero con etrepaños.<br>Su precio es de $20000</p>
-            <button class="add-to-cart-button">Agregar al carrito</button>
-        </div>
-    </div>
-
-     <!-- se inserta segunda fila con dos columnas, para imagenes de los productos 2 y 3--> 
-     <div class="row">
-        <!-- Columna 1-->
-        <div class="column">
-            <img src="producto2.jpg">
-            <!-- <p style="text-align: center;"><b>Imagen del producto 2</b></p> -->
-        </div>
-
-        <!-- Columna 2 -->
-        <div class="column">
-            <img src="producto3.jpg">
-            <!-- <p style="text-align: center;"><b>Imagen del producto 3</b></p> -->
-        </div>
-    </div>
-
-     <!-- se inserta segunda fila con dos columnas para descripción de los productos  2 y 3.--> 
-     <div class="row">
-        <!-- Columna 1-->
-        <div class="column">
-            <h3>Cuadro decorativo</h3>
-            <p>Cuadro decorativo Minimalista con figuras geométricas.<br>Su precio es de $10,000</p>
-            <button class="add-to-cart-button">Agregar al carrito</button>
-        </div>
-
-        <!-- Columna 2  ;con boton "agregar al carrito" -->
-        <div class="column">
-            <h3>Recamara King Zize</h3>
-            <p>Recamara king Zize con base de madera.<br>Su precio es de $25,000</p>
-            <button class="add-to-cart-button">Agregar al carrito</button>
-        </div>
-    </div>
-
-    <!-- se inserta tercera fila con tres columnas, para imagenes de los productos 4, 5 y 6--> 
-    <div class="row">
-        <!-- Columna 1-->
-        <div class="column">
-            <img src="producto4.jpg">
-            <!-- <p style="text-align: center;"><b>Imagen del producto 4</b></p> -->
-        </div>
-
-        <!-- Columna 2 -->
-        <div class="column">
-            <img src="producto5.jpg">
-            <!-- <p style="text-align: center;"><b>Imagen del producto 5</b></p> -->
-        </div>
-
-         <!-- Columna 3 -->
-         <div class="column">
-            <img src="producto6.jpg">
-            <!-- <p style="text-align: center;"><b>Imagen del producto 6</b></p> -->
-        </div>
-    </div>
-
-     <!-- se inserta tercera fila con tres columnas para descripción de los productos  4, 5 y 6.--> 
-     <div class="row">
-        <!-- Columna 1-->
-        <div class="column">
-            <h3>Sofá Minimalista</h3>
-            <p>Sofá minimalista, forrado en tela.<br>Su precio es de $20,000</p>
-            <button class="add-to-cart-button">Agregar al carrito</button>
-        </div> 
-
-        <!-- Columna 2  ;con boton "agregar al carrito" -->
-        <div class="column">
-            <h3>Sillón Individual</h3>
-            <p>Sillón individual, forrado en tela tipo piel, color gris.<br>Su precio es de $15,000</p>
-            <button class="add-to-cart-button">Agregar al carrito</button>
-        </div>
-
-        <!-- Columna 3  ;con boton "agregar al carrito" -->
-        <div class="column">
-            <h3>Sofá de lujo</h3>
-            <p>Sofá de lujo, forrado en tela tipo piel, color menta.<br>Su precio es de $20,000</p>
-            <button class="add-to-cart-button">Agregar al carrito</button>
-        </div>
-    </div>
-
-     <!-- Sección categorías de productos -->
-     <div>
-         <h2 style="text-align: center;">Categorías de productos</h2> 
-    </div>
-
-     <!-- se inserta cuarta fila con tres columnas, para las categorias 1, 2 y 3. --> 
-     <div class="row">
-        <!-- Columna 1-->
-        <div class="column categoria"> <!-- Columna  para la categiría 1-->
-            <a href="#"> <img src="categoria1.jpg">
-               <!-- <p style="text-align: center;">OFICINA</p> -->
-               <p>OFICINA</p>
-            </a>
-        </div>
-
-        <!-- Columna 2 -->
-        <div class="column categoria"> <!-- Columna para la categoría 2 -->
-            <a href="#"> <img src="categoria2.jpg">
-               <!-- <P style="text-align: center;">HOGAR</p> --> 
-                <p>HOGAR</p>
-            </a>
-        </div>
-
-         <!-- Columna 3 -->
-         <div class="column categoria"><!-- Columna para la categoría 3 -->
-            <a href="#"> <img src="categoria3.jpg">
-                <!-- <P style="text-align: center;">COCINA</p> -->
-                <p>COCINA</p>
-            </a>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <!-- footer con fila de tres columnas -->
-<footer>
-    <div class="column">
-        <h3>Categorias</h3>
-        <nav>
-           <ul>
-                <li><a href="#">Cocina</a></li>
-                <li><a href="#">Oficina</a></li>
-                <li><a href="#">Jardin</a></li>
-                <li><a href="#">Cochera</a></li>
-                <li><a href="#">Dormitorios</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="column">
-        <h3>Sobre nosotros</h3>
-        <nav>
-            <ul>
-                <li><a href="#">Nuestra historia</a></li>
-                <li><a href="#">Mision</a></li>
-                <li><a href="#">Visión y valores</a></li>
-                <li><a href="#">Carrera</a></li>
-                <li><a href="#">Póliticas de privacidad</a></li>
-                <li><a href="#">Términos del servicio</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="column">
-        <h3>Soporte</h3>
-        <nav>
-            <ul>
-                <li><a href="#">Preguntas frecuentes</a></li>
-                <li><a href="#">Ayuda en linea</a></li>
-                <li><a href="#">Confianza y seguridad</a></li>
-             </ul>
-        </nav>
-    </div>
-
-</footer>
-</body>
+    </body>
 </html>
