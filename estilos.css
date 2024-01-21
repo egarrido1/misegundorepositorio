@@ -1,12 +1,4 @@
-/* Archivo de estilos CSS para mi tienda de muebles */
-
-/* Define el tamaño de la fuente para todo el html */
-
-/*
-* {
-font-size: 62.5%;
-}
-*/
+/* Archivo de estilos CSS para "Mi tienda de muebles" */
 
 body {
     font-family: "Raleway", sans-serif;
@@ -21,6 +13,8 @@ h1, h2, h3 {
 h1 {
     font-size: 5rem,
 }
+
+/* Aplica tamaño de fuente para h1 */
 h2, h3 {
     font-size: 4rem,
 }
@@ -30,29 +24,72 @@ h2, h3 {
     color: #037BC0;
 }
 
-/* Alinea al centro el titulo de la  tienda */
+/* Alinea al centro el titulo de la tienda */
 header h1 {
     text-align: center;
 }
 
-/* Estilos para los enlaces del menú de navegación */
-nav a {
-    color: black; /* color gris */
-    text-decoration: none; /* elimina el subrayado */
-    padding: 10px 15px; /* Agrega espacio alrededor del texto */
-    transition: color 0.3s; /*Agrega una transición para el cambio de color */
+/* Se integra transición "colapso" al menú respondido" */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
 }
 
-/* Cambia el color del texto cuandp se pasa el cursor sobre los enlaces */
-nav a:hover {
-    color: purple; /*Cambia el color a azul */
+/* Estilos para los enlaces del menú de navegación de la sección Hero */
+nav a {
+    color: black; /* color negro */
+    text-decoration: none; /* elimina el subrayado */
+    padding: 10px 15px; /* Agrega espacio alrededor del texto */
+    cursor: pointer;
+}
+
+/* Cambia el color del texto cuando se pasa el cursor sobre los enlaces del menú */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: purple; /* Cambia el color a púrpura */
 }
 
 /* Estilos para la sección hero */
 .contenedor {
     position: relative;
     text-align: center;
+    color: #fff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ /* Define sección hero usando el valor cover */
+ .hero {
+    position: relative;
+    text-align: center;
     color: #fff;
+    padding: 2vh 0;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; 
+ }
+
+/* Tamaño de fuente normal para la sección hero */
+.hero h1 {
+    font-size: 3rem; /* font-size: 25rem; */
+    margin-bottom: 10vh; /* Añade un margen inferior */
+    max-height: 100%; /* Limita la altura máxima */
+}
+    
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10vh; /* Añade un margen inferior */
+    max-height: 100%; /* Limita la altura máxima */
+}
+
+/* Asegura que la imagen se vea completa en todos los dispositivos */
+.hero-image {
+    max-width: 100%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: cover;
 }
 
 /* Definición de textos sección hero */
@@ -60,79 +97,76 @@ nav a:hover {
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* Centra horizontalmente el primer texto */
+    width: 100%;
+    text-align: center;
 }
 
 .texto-sobre-imagen {
-    top: 20%; /* Ajusta la ppsición vertical del primer  texto */
+    top: 20vh; /* Ajusta la posición vertical del primer texto */
 }
 
-.segundo-texto {
-    top: 30%; /* Ajusta la osición vertical del segundo texto */
-    transform: translateX(-50%); /* Centra horizontalmemte el segundo texto */
+/* Agrega estilo para el botón de llamada a la acción */
+.mi-boton-personalizado {
+    background-color: #8cbc00; /* Reemplaza "tuColor" con el código de color deseado */
+    color: #fff; /* Color del texto del botón */
+    margin-bottom: 10px;
 }
 
-/* Estilos para el boton de llamada a la acción de la sección hero */
-.boton-llamada {  
-    top:40%; /* Ajusta la posición vertical del botón. */
-    margin: 10px auto;
-    padding: 10px 20px; /* ajusta el espaciado del boton. */
-    font-size: 16px;
-    background-color: #03c02f; /* Ajusta el color del fondo del boton. */
-    color: #fff;/* Ajusta el color del texto del boton. */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Agrega estilo para el botón de tres columnas */
+.btn-tres-columnas {
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus necesidades */
 }
 
- /* Define sección hero */
- .hero {
-    position: relative;
-    text-align: center;
-    color: #fff;
-}
-
-/* Estilos para la imagen sección Hero. */
-.hero-image {
-    /*width: 1.6rem;*/
-    width: 100%;
-    height: auto;
-}
-
- /* Reglas de estilos para las filas de dos columnas */
+ /* Reglas de estilos para las filas usando Flexbox */
  .row {
-    display: flex; /* Permite la distribución automática del esopacio */
+    display: flex; /* Permite la distribución automática del espacio */
     justify-content: space-between;
     margin-bottom: 20px;
     width: 100%;
 }
 
+/* Reglas de estilo para las columnas */
 .column {
     width: 48%; /* Ajusta el ancho */
-    box-sizing: border-box;
+    box-sizing: content-box;
     padding: 10px;  
     border: 1px solid #ccc; /* Añade un borde para mayor claridad */
 }
 
-/* Define estilos para encabezados h2 de productos */
-.productos h2 {
+/* Estilos para la descripción de cada producto */
+.descripcion {
+    background-color: #037BC0;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+/* Etilo para encabezado de productos */
+.productos {
     text-align: center;
 }
 
-/*  Estilos para las categorías */
+/* Estilos para las categorías */
 .categoria a {
-    color: grey; /* Color inicial del texto */
-    text-decoration: none; /* Elimina el subrayado */
-    transition: color 0.3s; /* Transición para el cambio de color */
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block; /* Añade display: block para que el enlace cubra la imagen */
 }
 
- /* Define estilo para los parrafos de las categorias */
- .categoria p {
+/* Estilos para encabezado de Categorías */
+.tit-categorias {
     text-align: center;
 }
 
-/* Cambia el color del texto  cuando se pasa el cursor sobre las categorías */
+/* Cambia el color del texto cuando se pasa el cursor sobre las categorías */
 .categoria a:hover {
-   color: purple; /* Cambia a color rojo */
+    color: purple;
+}
+
+/* Ajusta el tamaño de la imagen al pasar el ratón */
+.categoria:hover img {
+    transform: scale(1.2); /* Hace que la imagen crezca al 120% */
 }
 
  /* Estilos para el boton "Agregar al carrito" */
@@ -141,72 +175,224 @@ nav a:hover {
     margin: 10px auto; /* ajusta el margen sup. e inf. y centra horizontalmente. */
     padding: 10px 20px; /* ajusta el relleno  */
     font-size: 16px;
-    background-color: #03c02f;
+    background-color: #8cbc00;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-
- /* Estilos para las imagenes */
- .column img {
-    width: 100%; /* ajusta el ancho de la imagen al 100% de la columna */
-    height: auto; /* mantiene la porcion original de la imagen */
-}
-
-/* Agrega color azul a las columnas que no tengan imagen y que no sea el footer. */
-.column:not(.footer .footer-column):not(:has(img)) {
-    background-color: #4065e0;
-    color: white;
+/* Define estilo para titulo de cayegorias
+.estilo-categorias {
     text-align: center;
 }
 
- /* Reglas de estilo para el footer  */
+/* Estilos para las imagenes */
+.column img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% de la columna */
+    height: auto; /* Mantiene la porcion original de la imagen */
+}
+
+/* Agrega color azul a las columnas que no tengan imagen y que no sea el footer. */
+body :not(footer) .col-md-4:not(:has(img)),
+body :not(footer) .column:not(.col-md-4):not(:has(img)) {
+    background-color: #037BC0;
+    color: white;
+    text-align: center;
+    border: 1px solid #ccc; /* Ajusta el borde */
+}
+
+ /* Reglas de estilo para el footer usando flexbox */
  footer {
     display: flex; /* Permite la distribución automática del esopacio */
     justify-content: space-between;
     background-color: white; 
-    color: white; /* Color blanco para encabezados del footer */
-    padding: 20px 0;
+    text-align: center;
+ }
+    
+ /* Reglas de estilo para cada columna del footer */
+.footer-column {
+    width: 100%;
+    box-sizing: border-box; /* El tamaño total del elemento se mantiene constante */
+    padding: 10px;
+    border: 1px solid #ccc; /* Crea un borde */
+}
+
+/* Reglas de estilo para el menú de navegación del footer */
+.footer-column nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
- /* Reglas de estilo para cada columna del footer */
- .footer-column {
-    width: 30%;
-    box-sizing: border-box; /* El tamaño total del elemento se mantiene constante */
-    padding: 10px;
-    border: 1px solid #ccc;
+/* Reglas de estilo para los encabezados del footer */
+.footer-column h3 {
+    margin-bottom: 5px;
+    margin-top: 0;
+    text-align: center;
+    color: rgb(75, 75, 203); /* Cambia a tu color azul deseado */
 }
 
-.footer-column nav {
-    list-style: none; 
-    padding: 0; /* Elimina el relleno predeterminado */
-    margin: 0; /* Elimina el margen predeterminado */
-}
-
- /* Estilos para los enlaces del menu de navegación del footer. */
- .footer-column nav a {
-    color: #ccc;  /*color de texto blanco */
+/* Estilos para los enlaces del menu de navegación del footer */
+.footer-column nav a {
+    color: black;  /* color de texto negro */
     text-decoration: none;  /* Sin decoración del enlace */
-    padding: 10px; /* Relleno */
-    display: block;  /* Menu vertical */
-    margin-bottom: 5px; /* Espacio entre elementos del menu */
+    display: inline-block;
+    transition: color 0.3s; /* Transición para el cambio de color */
 }
 
-ul {
+.footer-column a:hover {
+    color: purple; /* Cambia a color rojo */
+ }
+
+.footer-column ul {
     list-style: none; /* Elimina las viñetas predeterminadas de las listas */
     padding: 0;
 }
 
-li {
-    margin-bottom: 10px; /* Ajusta el espacio entre cada elemento de la lista */
-    display: block; /* Asegura que los elementos li esten en lineas separadas y se centren correctamente */
-}
-
-  /* Defien estilo para encabezados h3 del footer */
-  header h3 {
+/* Define estilo para encabezados h3 del footer */
+footer h3 {
     text-align: center;
 }
 
+/* Agrega estilos para la declaración de derechos reservados */
+.rights {
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Media query para el menu de navegación, integrando la transición "colapso" */
+/* Estilo para el menú responsivo en dispositivos móviles */
+@media (max-width: 767px) {
+   
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar-collapse {
+        display: none;
+        width: 100%;
+    }
+    
+    .navbar-toggler {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .collapse.show {
+        display: flex;
+    }
+    
+    nav a {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 15px;
+    }
+}
+
+/**** Sección queries ****/
+    
+/* Media query para sección hero */
+/* Ajuste de estilos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: 3vh;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+        margin-bottom: 3vh;
+    }
+
+    .texto-sobre-imagen,
+    .segundo-texto,
+    .boton-llamada {
+        position: relative;
+        left: auto;
+        transform: none;
+        top: auto;
+        text-align: center; /* Añadimos esta propiedad para centrar el texto */
+    }
+
+    .boton-llamada {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Media query para sección productos */
+/* Media query para pantallas de 767px o menos (tabletas) */
+@media (max-width: 767px) {
+    .row {
+        flex-direction: column; /* Cambia la dirección de flexbox a columnas */
+        flex-wrap: nowrap; /* Evita que los elementos se envuelvan en una nueva línea */
+        justify-content: space-between; /* Distribuye los elementos uniformemente con espacio entre ellos */
+    }
+
+    .column {
+        width: 100%; /* Ocupa todo el ancho en pantallas más pequeñas */
+        margin-bottom: 10px; /* Añade margen inferior entre productos en pantallas más pequeñas */
+    }
+    
+    .descripcion {
+        width: 100%; /* Ocupa todo el ancho de la descripción en pantallas más pequeñas */
+    }
+}
+
+/* Media query para tabletas, enla sección productos*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .row {
+        flex-direction: row; /* Cambia la dirección de flexbox a filas */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea si no caben en la fila */
+        justify-content: space-between; /* Distribuye los elementos al principio de la fila */
+    }
+
+    .column {
+        width: auto; /* Deja que las columnas ocupen su ancho natural */
+        margin-bottom: 10px; /* Añade margen inferior entre productos en tabletas */
+    }
+    
+    .descripcion {
+        width: auto; /* Deja que las descripciones ocupen su ancho natural */
+    }
+}
+
+/* Media queries para el footer */
+@media (max-width: 767px) {
+    footer {
+        flex-direction: column; /* Cambia la dirección a columna en dispositivos pequeños */
+    }
+    .footer-column {
+        flex-grow: 1;
+        margin-bottom: 10px; /* Agrega espacio entre las columnas */
+        width: 100%; /* Ocupa el ancho completo en dispositivos pequeños */
+    }
+}
+
+/* Reglas para las columnas del footer en dispositivos más grandes */
+@media (min-width: 768px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch; /* Asegura que las columnas se expandan para ocupar el espacio disponible */
+    }
+    .footer-column {
+        flex-basis: auto; /* Ajusta el ancho según sea necesario */
+        margin-bottom: 10px;
+    }
+}
+
+/* Regla para el menu del footer */
+/* Regla adicional para dispositivos más grandes como una MacBook */
+@media (min-width: 1200px) {
+    .container-xl {
+        width: 100%; /* Asegura que el contenedor-xl ocupe el ancho completo */
+        padding-right: 3px;
+        padding-left: 3px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
 
